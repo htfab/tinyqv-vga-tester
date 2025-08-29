@@ -33,19 +33,11 @@ async def test_project(dut):
     dut._log.info("Test project behavior")
 
     # Test register write and read back
-    await tqv.write_reg(0, 20)
-    assert await tqv.read_reg(0) == 20
+    await tqv.write_reg(0, 208)
+    assert await tqv.read_reg(0) == 208
 
-    # Set an input value, in the example this will be added to the register value
-    dut.ui_in.value = 30
+    for i in range(16):
+        val = (0x165ca97fe3 >> i) & 0xff
+        await tqv.write_reg(i, val)
+        assert await tqv.read_reg(i) == val
 
-    # Wait for two clock cycles to see the output values, because ui_in is synchronized over two clocks,
-    # and a further clock is required for the output to propagate.
-    await ClockCycles(dut.clk, 3)
-
-    # The following assertion is just an example of how to check the output values.
-    # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 50
-
-    # Keep testing the module by changing the input values, waiting for
-    # one or more clock cycles, and asserting the expected output values.

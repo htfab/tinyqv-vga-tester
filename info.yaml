@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "VGA mode tester"      # Project title
+  author:       "htfab"          # Your name
+  discord:      "h.tamas"        # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Experiment with different VGA modes by setting timing parameters"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     64000000  # Clock frequency in Hz (or 0 if not applicable)
 
@@ -40,14 +40,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "TinyVGA red 1"
+  uo[1]: "TinyVGA green 1"
+  uo[2]: "TinyVGA blue 1"
+  uo[3]: "TinyVGA vsync"
+  uo[4]: "TinyVGA red 0"
+  uo[5]: "TinyVGA green 0"
+  uo[6]: "TinyVGA blue 0"
+  uo[7]: "TinyVGA hsync"
 
   # Bidirectional pins
   uio[0]: ""

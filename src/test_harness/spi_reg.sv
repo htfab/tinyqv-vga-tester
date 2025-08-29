@@ -81,6 +81,10 @@ module spi_reg #(
   logic sample_addr;
   logic sample_data;
 
+  // Addr and Read/Write Command register
+  logic [ADDR_W-1:0] addr;
+  logic reg_rw;
+
   // Next state logic
   always_comb begin
     // default assignments
@@ -179,10 +183,6 @@ module spi_reg #(
       end
     end
   end
-
-  // Addr and Read/Write Command register
-  logic [ADDR_W-1:0] addr;
-  logic reg_rw;
 
   // Addr and Read/Write Command Registers
   always_ff @(negedge(rstb) or posedge(clk)) begin
