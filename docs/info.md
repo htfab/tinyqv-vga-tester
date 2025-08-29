@@ -1,4 +1,4 @@
-# Your project title
+# Video mode tester peripheral
 
 Author: htfab
 

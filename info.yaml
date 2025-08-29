@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "VGA mode tester"      # Project title
+  title:        "Video mode tester"      # Project title
   author:       "htfab"          # Your name
   discord:      "h.tamas"        # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Experiment with different VGA modes by setting timing parameters"      # One line description of what your project does
+  description:  "Experiment with different VGA timing parameters"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     64000000  # Clock frequency in Hz (or 0 if not applicable)
 
